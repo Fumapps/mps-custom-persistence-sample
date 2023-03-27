@@ -29,6 +29,10 @@ jobs:
       - name: Download and Prepare MPS
         run: sh ./gradlew prepareMps
 
+      # Generate Project
+      - name: Generate Project
+        run: sh ./gradlew mpsGenerate
+
       # Build Project
       - name: Build Project
         run: sh ./gradlew mpsBuild

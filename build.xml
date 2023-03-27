@@ -3,9 +3,9 @@
   <property name="build.dir" location="build" />
   <property name="build.tmp" location="${build.dir}/tmp/xmlPersistencePlugin" />
   <property name="build.layout" location="${build.dir}/artifacts/xmlPersistencePlugin" />
-  <property name="mps_dist" location="${basedir}/build/mps-bundle/mps" />
-  <property name="idea_home" location="${mps_dist}" />
-  <property name="artifacts.mps" location="${mps_dist}" />
+  <property name="mps_home" location="${basedir}/build/mps-bundle/mps" />
+  <property name="idea_home" location="${mps_home}" />
+  <property name="artifacts.mps" location="${mps_home}" />
   <property name="artifacts.IDEA" location="${idea_home}" />
   <property file="${artifacts.mps}/build.properties" prefix="import.mps" />
   <property name="mps.build.number" value="${import.mps.mps.build.number}" />
@@ -277,7 +277,7 @@
         <arg value="-ea" />
         <arg value="-Xmx512m" />
       </jvmargs>
-      <macro name="mps_dist" path="${mps_dist}" />
+      <macro name="mps_home" path="${mps_home}" />
       <macro name="idea_home" path="${idea_home}" />
     </generate>
   </target>

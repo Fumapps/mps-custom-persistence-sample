@@ -10,9 +10,14 @@ task prepareMps {
     dependsOn 'buildOsSpecificBundle'
 }
 
+task mpsGenerate {
+    group 'mps'
+    dependsOn 'mpsAntGenerate'
+}
+
 task mpsBuild {
     group 'mps'
-    dependsOn 'mpsAntGenerate', 'mpsAntBuild'
+    dependsOn mpsGenerate, 'mpsAntBuild'
 }
 
 task mpsClean {
