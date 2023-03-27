@@ -7,6 +7,7 @@
     <use id="3a13115c-633c-4c5c-bbcc-75c4219e9555" name="jetbrains.mps.lang.quotation" version="5" />
     <use id="7866978e-a0f0-4cc7-81bc-4d213d9375e1" name="jetbrains.mps.lang.smodel" version="19" />
     <use id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage" version="12" />
+    <use id="2804e637-817e-4f69-ae4f-4c634431acc9" name="CustomPersistenceSampleLanguage" version="0" />
   </languages>
   <imports>
     <import index="iuxj" ref="r:64db3a92-5968-4a73-b456-34504a2d97a6(jetbrains.mps.core.xml.structure)" />
@@ -14,6 +15,7 @@
     <import index="33ny" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.util(JDK/)" />
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" />
     <import index="w1kc" ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea/java:jetbrains.mps.smodel(MPS.Core/)" />
+    <import index="1ldj" ref="r:6685d182-fbc6-4487-ad1f-87329b47c040(CustomPersistenceSampleLanguage.structure)" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
   </imports>
   <registry>
@@ -301,7 +303,7 @@
     </language>
   </registry>
   <node concept="312cEu" id="2bMsLiVuJBO">
-    <property role="TrG5h" value="XmlConverter" />
+    <property role="TrG5h" value="CustomPersistenceSampleXmlConverter" />
     <node concept="2tJIrI" id="2bMsLiVuLXb" role="jymVt" />
     <node concept="2YIFZL" id="2bMsLiVuSBb" role="jymVt">
       <property role="TrG5h" value="convertDocument" />
@@ -351,12 +353,12 @@
             <node concept="2ShNRf" id="2bMsLiVuSWA" role="33vP2m">
               <node concept="3zrR0B" id="2bMsLiVuUHL" role="2ShVmc">
                 <node concept="3Tqbb2" id="2bMsLiVuUHN" role="3zrR0E">
-                  <ref role="ehGHo" to="iuxj:5M4a$b5j9j0" resolve="XmlFile" />
+                  <ref role="ehGHo" to="1ldj:2bzJNrX5cbD" resolve="SampleCustomPersistenceXmlElement" />
                 </node>
               </node>
             </node>
             <node concept="3Tqbb2" id="2bMsLiVuSVg" role="1tU5fm">
-              <ref role="ehGHo" to="iuxj:5M4a$b5j9j0" resolve="XmlFile" />
+              <ref role="ehGHo" to="1ldj:2bzJNrX5cbD" resolve="SampleCustomPersistenceXmlElement" />
             </node>
           </node>
         </node>
@@ -457,7 +459,7 @@
       </node>
       <node concept="3Tm1VV" id="2bMsLiVuRZU" role="1B3o_S" />
       <node concept="3Tqbb2" id="2bMsLiVuS0f" role="3clF45">
-        <ref role="ehGHo" to="iuxj:5M4a$b5j9j0" resolve="XmlFile" />
+        <ref role="ehGHo" to="1ldj:2bzJNrX5cbD" resolve="SampleCustomPersistenceXmlElement" />
       </node>
       <node concept="37vLTG" id="2bMsLiVuSBw" role="3clF46">
         <property role="TrG5h" value="document" />

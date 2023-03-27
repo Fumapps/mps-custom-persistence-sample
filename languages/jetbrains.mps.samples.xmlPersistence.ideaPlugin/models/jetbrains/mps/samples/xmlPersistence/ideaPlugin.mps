@@ -117,7 +117,7 @@
             <node concept="2pNUuL" id="3EZR1q044pb" role="2pNNFR">
               <property role="2pNUuO" value="implementationClass" />
               <node concept="2pMdtt" id="Y56RjR6ZQs" role="2pMdts">
-                <property role="2pMdty" value="jetbrains.mps.persistence.XmlModelPersistence" />
+                <property role="2pMdty" value="jetbrains.mps.persistence.CustomPersistenceSampleXmlModelPersistence" />
               </node>
             </node>
           </node>

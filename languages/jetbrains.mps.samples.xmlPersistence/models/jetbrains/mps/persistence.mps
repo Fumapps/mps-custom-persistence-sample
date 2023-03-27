@@ -281,7 +281,7 @@
     </language>
   </registry>
   <node concept="312cEu" id="6otXYHBgsV0">
-    <property role="TrG5h" value="XmlModelPersistence" />
+    <property role="TrG5h" value="CustomPersistenceSampleXmlModelPersistence" />
     <property role="1sVAO0" value="false" />
     <property role="1EXbeo" value="false" />
     <node concept="3Tm1VV" id="6otXYHBgsV2" role="1B3o_S" />
@@ -1230,7 +1230,7 @@
     </node>
   </node>
   <node concept="312cEu" id="1nLyZqZ5Pn8">
-    <property role="TrG5h" value="XmlPersistenceModelDescriptor" />
+    <property role="TrG5h" value="CustomPersistenceSampleXmlPersistenceModelDescriptor" />
     <node concept="2tJIrI" id="1nLyZqZ5Tq8" role="jymVt" />
     <node concept="3clFbW" id="1nLyZqZ5Ua7" role="jymVt">
       <node concept="3cqZAl" id="1nLyZqZ5Ua8" role="3clF45" />
