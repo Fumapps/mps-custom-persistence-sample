@@ -6,8 +6,8 @@ on:
   workflow_call:
 
 env:
-  PROJECT_NAME: "MySetupSample"
-  LANGUAGE_NAME: "MySetupSampleLanguage"
+  BUILD_NAME: "xmlPersistencePlugin"
+  ARCHIVE_NAME: "MPS-sample-persistence"
 
 jobs:
   build:
@@ -49,4 +49,4 @@ jobs:
         with:
           name: build-artifacts
           path: |
-            build/artifacts/${{ env.PROJECT_NAME }}/${{ env.LANGUAGE_NAME }}.zip
+            build/artifacts/${{ env.BUILD_NAME }}/${{ env.ARCHIVE_NAME }}.zip
