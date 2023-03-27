@@ -154,7 +154,7 @@
     <delete dir="${build.layout}" />
   </target>
   
-  <target name="compileJava" depends="java.compile.jetbrains.mps.samples.xmlPersistence, java.compile.jetbrains.mps.samples.xmlPersistence.build, java.compile.jetbrains.mps.samples.xmlPersistence.ideaPlugin, java.compile.CustomPersistenceSampleLanguage, java.compile.CustomPersistenceSampleLanguage.generator" />
+  <target name="compileJava" depends="java.compile.jetbrains.mps.samples.xmlPersistence, java.compile.jetbrains.mps.samples.xmlPersistence.build, java.compile.jetbrains.mps.samples.xmlPersistence.ideaPlugin, java.compile.CustomPersistenceSampleLanguage, java.compile.CustomPersistenceSampleLanguage.generator, java.compile.CustomPersistenceSampleLanguage.sandbox" />
   
   <target name="processResources" />
   
@@ -271,6 +271,7 @@
         <module file="${basedir}/languages/jetbrains.mps.samples.xmlPersistence.ideaPlugin/jetbrains.mps.samples.xmlPersistence.ideaPlugin.msd" />
       </chunk>
       <chunk>
+        <module file="${basedir}/languages/CustomPersistenceSampleLanguage.sandbox/CustomPersistenceSampleLanguage.sandbox.msd" />
         <module file="${basedir}/languages/jetbrains.mps.samples.xmlPersistence/jetbrains.mps.samples.xmlPersistence.msd" />
       </chunk>
       <jvmargs>
@@ -419,11 +420,26 @@
     </javac>
   </target>
   
+  <target name="java.compile.CustomPersistenceSampleLanguage.sandbox" depends="fetchDependencies">
+    <mkdir dir="${basedir}/languages/CustomPersistenceSampleLanguage.sandbox/source_gen" />
+    <mkdir dir="${build.tmp}/java/out/CustomPersistenceSampleLanguage.sandbox" />
+    <javac destdir="${build.tmp}/java/out/CustomPersistenceSampleLanguage.sandbox" fork="false" encoding="utf8" includeantruntime="false" debug="true" source="11" target="11">
+      <compilerarg value="-Xlint:none" />
+      <src>
+        <path location="${basedir}/languages/CustomPersistenceSampleLanguage.sandbox/source_gen" />
+      </src>
+      <classpath>
+        <fileset file="${artifacts.mps}/lib/mps-references.jar" />
+      </classpath>
+    </javac>
+  </target>
+  
   <target name="cleanSources">
     <delete dir="${basedir}/languages/CustomPersistenceSampleLanguage/source_gen" />
     <delete dir="${basedir}/languages/CustomPersistenceSampleLanguage/generator/source_gen" />
     <delete dir="${basedir}/languages/jetbrains.mps.samples.xmlPersistence.build/source_gen" />
     <delete dir="${basedir}/languages/jetbrains.mps.samples.xmlPersistence.ideaPlugin/source_gen" />
+    <delete dir="${basedir}/languages/CustomPersistenceSampleLanguage.sandbox/source_gen" />
     <delete dir="${basedir}/languages/jetbrains.mps.samples.xmlPersistence/source_gen" />
   </target>
 </project>

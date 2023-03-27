@@ -516,6 +516,43 @@
         <ref role="m$_y1" to="ffeo:4k71ibbKLe8" resolve="jetbrains.mps.core" />
       </node>
     </node>
+    <node concept="1E1JtA" id="1KKUl4nFfdi" role="3989C9">
+      <property role="BnDLt" value="true" />
+      <property role="TrG5h" value="CustomPersistenceSampleLanguage.sandbox" />
+      <property role="3LESm3" value="3b2706dd-7cb7-4738-8f54-7bd3da7f61da" />
+      <node concept="55IIr" id="1KKUl4nFfdk" role="3LF7KH">
+        <node concept="2Ry0Ak" id="1KKUl4nFffe" role="iGT6I">
+          <property role="2Ry0Am" value="languages" />
+          <node concept="2Ry0Ak" id="1KKUl4nFffj" role="2Ry0An">
+            <property role="2Ry0Am" value="CustomPersistenceSampleLanguage.sandbox" />
+            <node concept="2Ry0Ak" id="1KKUl4nFffo" role="2Ry0An">
+              <property role="2Ry0Am" value="CustomPersistenceSampleLanguage.sandbox.msd" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="1BupzO" id="1KKUl4nFffN" role="3bR31x">
+        <property role="3ZfqAx" value="models" />
+        <property role="1Hdu6h" value="true" />
+        <property role="1HemKv" value="true" />
+        <node concept="3LXTmp" id="1KKUl4nFffO" role="1HemKq">
+          <node concept="55IIr" id="1KKUl4nFffJ" role="3LXTmr">
+            <node concept="2Ry0Ak" id="1KKUl4nFffK" role="iGT6I">
+              <property role="2Ry0Am" value="languages" />
+              <node concept="2Ry0Ak" id="1KKUl4nFffL" role="2Ry0An">
+                <property role="2Ry0Am" value="CustomPersistenceSampleLanguage.sandbox" />
+                <node concept="2Ry0Ak" id="1KKUl4nFffM" role="2Ry0An">
+                  <property role="2Ry0Am" value="models" />
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="3qWCbU" id="1KKUl4nFffP" role="3LXTna">
+            <property role="3qWCbO" value="**/*.mps, **/*.mpsr, **/.model, **/*.xml" />
+          </node>
+        </node>
+      </node>
+    </node>
     <node concept="2sgV4H" id="145rAk1QE4Y" role="1l3spa">
       <ref role="1l3spb" to="ffeo:3IKDaVZmzS6" resolve="mps" />
       <node concept="398BVA" id="145rAk1QE54" role="2JcizS">
