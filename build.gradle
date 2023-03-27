@@ -1,5 +1,5 @@
 ext.mpsVersion = "2022.2"
-ext.languageName = "MySetupSampleLanguage"
+ext.languageName = "CustomPersistenceSampleLanguage"
 
 ext.mpsPlugins = [ ]
 
