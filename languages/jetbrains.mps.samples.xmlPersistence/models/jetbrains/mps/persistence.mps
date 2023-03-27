@@ -2263,9 +2263,9 @@
             <ref role="37wK5l" to="33ny:~Collections.singleton(java.lang.Object)" resolve="singleton" />
             <ref role="1Pybhc" to="33ny:~Collections" resolve="Collections" />
             <node concept="pHN19" id="1nLyZqZ54hK" role="37wK5m">
-              <node concept="2V$Bhx" id="1nLyZqZ54hL" role="2V$M_3">
-                <property role="2V$B1T" value="479c7a8c-02f9-43b5-9139-d910cb22f298" />
-                <property role="2V$B1Q" value="jetbrains.mps.core.xml" />
+              <node concept="2V$Bhx" id="4gaGo$20zZL" role="2V$M_3">
+                <property role="2V$B1T" value="2804e637-817e-4f69-ae4f-4c634431acc9" />
+                <property role="2V$B1Q" value="CustomPersistenceSampleLanguage" />
               </node>
             </node>
           </node>
@@ -2342,6 +2342,91 @@
     <node concept="3Tm1VV" id="1nLyZqZ5Pn9" role="1B3o_S" />
     <node concept="3uibUv" id="1nLyZqZ6dr9" role="1zkMxy">
       <ref role="3uigEE" to="w1kc:~EditableModelDescriptor" resolve="EditableModelDescriptor" />
+    </node>
+    <node concept="3uibUv" id="1t_wMt$4Xa$" role="EKbjA">
+      <ref role="3uigEE" to="g3l6:~GeneratableSModel" resolve="GeneratableSModel" />
+    </node>
+    <node concept="3clFb_" id="1t_wMt$4ZO6" role="jymVt">
+      <property role="TrG5h" value="isGeneratable" />
+      <node concept="3Tm1VV" id="1t_wMt$4ZO7" role="1B3o_S" />
+      <node concept="10P_77" id="1t_wMt$4ZO9" role="3clF45" />
+      <node concept="3clFbS" id="1t_wMt$4ZOl" role="3clF47">
+        <node concept="3clFbF" id="1t_wMt$4ZOo" role="3cqZAp">
+          <node concept="3clFbT" id="1t_wMt$4ZOn" role="3clFbG">
+            <property role="3clFbU" value="true" />
+          </node>
+        </node>
+      </node>
+      <node concept="2AHcQZ" id="1t_wMt$4ZOm" role="2AJF6D">
+        <ref role="2AI5Lk" to="wyt6:~Override" />
+      </node>
+    </node>
+    <node concept="3clFb_" id="1t_wMt$4ZOp" role="jymVt">
+      <property role="TrG5h" value="isGenerateIntoModelFolder" />
+      <node concept="3Tm1VV" id="1t_wMt$4ZOq" role="1B3o_S" />
+      <node concept="10P_77" id="1t_wMt$4ZOs" role="3clF45" />
+      <node concept="3clFbS" id="1t_wMt$4ZOv" role="3clF47">
+        <node concept="3clFbF" id="1t_wMt$4ZOy" role="3cqZAp">
+          <node concept="3clFbT" id="1t_wMt$4ZOx" role="3clFbG" />
+        </node>
+      </node>
+      <node concept="2AHcQZ" id="1t_wMt$4ZOw" role="2AJF6D">
+        <ref role="2AI5Lk" to="wyt6:~Override" />
+      </node>
+    </node>
+    <node concept="3clFb_" id="1t_wMt$4ZOz" role="jymVt">
+      <property role="TrG5h" value="setGenerateIntoModelFolder" />
+      <node concept="3Tm1VV" id="1t_wMt$4ZO$" role="1B3o_S" />
+      <node concept="3cqZAl" id="1t_wMt$4ZOA" role="3clF45" />
+      <node concept="37vLTG" id="1t_wMt$4ZOB" role="3clF46">
+        <property role="TrG5h" value="b" />
+        <node concept="10P_77" id="1t_wMt$4ZOC" role="1tU5fm" />
+      </node>
+      <node concept="3clFbS" id="1t_wMt$4ZOK" role="3clF47" />
+      <node concept="2AHcQZ" id="1t_wMt$4ZOL" role="2AJF6D">
+        <ref role="2AI5Lk" to="wyt6:~Override" />
+      </node>
+    </node>
+    <node concept="3clFb_" id="1t_wMt$4ZOM" role="jymVt">
+      <property role="TrG5h" value="getModelHash" />
+      <node concept="3Tm1VV" id="1t_wMt$4ZON" role="1B3o_S" />
+      <node concept="3uibUv" id="1t_wMt$4ZOP" role="3clF45">
+        <ref role="3uigEE" to="wyt6:~String" resolve="String" />
+      </node>
+      <node concept="3clFbS" id="1t_wMt$4ZOS" role="3clF47">
+        <node concept="3clFbF" id="1t_wMt$4ZOV" role="3cqZAp">
+          <node concept="10Nm6u" id="1t_wMt$4ZOU" role="3clFbG" />
+        </node>
+      </node>
+      <node concept="2AHcQZ" id="1t_wMt$4ZOT" role="2AJF6D">
+        <ref role="2AI5Lk" to="wyt6:~Override" />
+      </node>
+    </node>
+    <node concept="3clFb_" id="1t_wMt$4ZOW" role="jymVt">
+      <property role="TrG5h" value="setDoNotGenerate" />
+      <node concept="3Tm1VV" id="1t_wMt$4ZOX" role="1B3o_S" />
+      <node concept="3cqZAl" id="1t_wMt$4ZOZ" role="3clF45" />
+      <node concept="37vLTG" id="1t_wMt$4ZP0" role="3clF46">
+        <property role="TrG5h" value="b" />
+        <node concept="10P_77" id="1t_wMt$4ZP1" role="1tU5fm" />
+      </node>
+      <node concept="3clFbS" id="1t_wMt$4ZP4" role="3clF47" />
+      <node concept="2AHcQZ" id="1t_wMt$4ZP5" role="2AJF6D">
+        <ref role="2AI5Lk" to="wyt6:~Override" />
+      </node>
+    </node>
+    <node concept="3clFb_" id="1t_wMt$4ZP6" role="jymVt">
+      <property role="TrG5h" value="isDoNotGenerate" />
+      <node concept="3Tm1VV" id="1t_wMt$4ZP7" role="1B3o_S" />
+      <node concept="10P_77" id="1t_wMt$4ZP9" role="3clF45" />
+      <node concept="3clFbS" id="1t_wMt$4ZPc" role="3clF47">
+        <node concept="3clFbF" id="1t_wMt$4ZPf" role="3cqZAp">
+          <node concept="3clFbT" id="1t_wMt$4ZPe" role="3clFbG" />
+        </node>
+      </node>
+      <node concept="2AHcQZ" id="1t_wMt$4ZPd" role="2AJF6D">
+        <ref role="2AI5Lk" to="wyt6:~Override" />
+      </node>
     </node>
   </node>
 </model>
