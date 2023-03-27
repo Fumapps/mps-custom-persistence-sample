@@ -26,9 +26,9 @@
   </registry>
   <node concept="1TIwiD" id="2bzJNrX5cbD">
     <property role="EcuMT" value="2514063259898004201" />
-    <property role="TrG5h" value="SampleCustomPersistenceXmlElement" />
+    <property role="TrG5h" value="SampleCustomPersistenceXmlFile" />
     <property role="19KtqR" value="true" />
-    <ref role="1TJDcQ" to="iuxj:5M4a$b5iL2M" resolve="XmlElement" />
+    <ref role="1TJDcQ" to="iuxj:5M4a$b5j9j0" resolve="XmlFile" />
   </node>
 </model>
 
