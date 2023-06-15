@@ -9,6 +9,22 @@
     <import index="ffeo" ref="r:874d959d-e3b4-4d04-b931-ca849af130dd(jetbrains.mps.ide.build)" />
   </imports>
   <registry>
+    <language id="479c7a8c-02f9-43b5-9139-d910cb22f298" name="jetbrains.mps.core.xml">
+      <concept id="6666499814681541919" name="jetbrains.mps.core.xml.structure.XmlTextValue" flags="ng" index="2pMdtt">
+        <property id="6666499814681541920" name="text" index="2pMdty" />
+      </concept>
+      <concept id="6666499814681415858" name="jetbrains.mps.core.xml.structure.XmlElement" flags="ng" index="2pNNFK">
+        <property id="6666499814681415862" name="tagName" index="2pNNFO" />
+        <property id="6999033275467544021" name="shortEmptyNotation" index="qg3DV" />
+        <child id="6666499814681415861" name="attributes" index="2pNNFR" />
+        <child id="1622293396948928802" name="content" index="3o6s8t" />
+      </concept>
+      <concept id="6666499814681447923" name="jetbrains.mps.core.xml.structure.XmlAttribute" flags="ng" index="2pNUuL">
+        <property id="6666499814681447926" name="attrName" index="2pNUuO" />
+        <child id="6666499814681541918" name="value" index="2pMdts" />
+      </concept>
+      <concept id="1622293396948952339" name="jetbrains.mps.core.xml.structure.XmlText" flags="nn" index="3o6iSG" />
+    </language>
     <language id="798100da-4f0a-421a-b991-71f8c50ce5d2" name="jetbrains.mps.build">
       <concept id="5481553824944787378" name="jetbrains.mps.build.structure.BuildSourceProjectRelativePath" flags="ng" index="55IIr" />
       <concept id="7321017245476976379" name="jetbrains.mps.build.structure.BuildRelativePath" flags="ng" index="iG8Mu">
@@ -82,13 +98,13 @@
       </concept>
       <concept id="6592112598314498932" name="jetbrains.mps.build.mps.structure.BuildMps_IdeaPlugin" flags="ng" index="m$_wf">
         <property id="6592112598314498927" name="id" index="m$_wk" />
+        <child id="1359186315025500371" name="xml" index="20twgj" />
         <child id="7832771629084912518" name="vendor" index="2iVFfd" />
         <child id="6592112598314498931" name="version" index="m$_w8" />
         <child id="6592112598314499050" name="content" index="m$_yh" />
         <child id="6592112598314499028" name="dependencies" index="m$_yJ" />
         <child id="6592112598314499021" name="name" index="m$_yQ" />
         <child id="6592112598314855574" name="containerName" index="m_cZH" />
-        <child id="1238980147629899306" name="pluginXml" index="I30fb" />
         <child id="2172791612906637490" name="description" index="3s6cr7" />
       </concept>
       <concept id="6592112598314498926" name="jetbrains.mps.build.mps.structure.BuildMpsLayout_Plugin" flags="ng" index="m$_wl">
@@ -465,35 +481,6 @@
           <property role="3MwjfP" value="1.0" />
         </node>
       </node>
-      <node concept="55IIr" id="7ZoWiKcez9z" role="I30fb">
-        <node concept="2Ry0Ak" id="7ZoWiKcez9_" role="iGT6I">
-          <property role="2Ry0Am" value="languages" />
-          <node concept="2Ry0Ak" id="7ZoWiKcez9B" role="2Ry0An">
-            <property role="2Ry0Am" value="jetbrains.mps.samples.xmlPersistence.ideaPlugin" />
-            <node concept="2Ry0Ak" id="7ZoWiKcez9D" role="2Ry0An">
-              <property role="2Ry0Am" value="source_gen" />
-              <node concept="2Ry0Ak" id="7ZoWiKcez9F" role="2Ry0An">
-                <property role="2Ry0Am" value="jetbrains" />
-                <node concept="2Ry0Ak" id="7ZoWiKcez9H" role="2Ry0An">
-                  <property role="2Ry0Am" value="mps" />
-                  <node concept="2Ry0Ak" id="7ZoWiKcez9J" role="2Ry0An">
-                    <property role="2Ry0Am" value="samples" />
-                    <node concept="2Ry0Ak" id="7ZoWiKcez9L" role="2Ry0An">
-                      <property role="2Ry0Am" value="xmlPersistence" />
-                      <node concept="2Ry0Ak" id="7ZoWiKcez9N" role="2Ry0An">
-                        <property role="2Ry0Am" value="ideaPlugin" />
-                        <node concept="2Ry0Ak" id="7ZoWiKcez9P" role="2Ry0An">
-                          <property role="2Ry0Am" value="plugin.xml" />
-                        </node>
-                      </node>
-                    </node>
-                  </node>
-                </node>
-              </node>
-            </node>
-          </node>
-        </node>
-      </node>
       <node concept="3_J27D" id="7ZoWiKcezc5" role="3s6cr7">
         <node concept="3Mxwew" id="7ZoWiKcezc7" role="3MwsjC">
           <property role="3MwjfP" value="Sample persistence of MPS models into xml files" />
@@ -515,40 +502,40 @@
       <node concept="m$_yC" id="7ZoWiKceS$J" role="m$_yJ">
         <ref role="m$_y1" to="ffeo:4k71ibbKLe8" resolve="jetbrains.mps.core" />
       </node>
-    </node>
-    <node concept="1E1JtA" id="1KKUl4nFfdi" role="3989C9">
-      <property role="BnDLt" value="true" />
-      <property role="TrG5h" value="CustomPersistenceSampleLanguage.sandbox" />
-      <property role="3LESm3" value="3b2706dd-7cb7-4738-8f54-7bd3da7f61da" />
-      <node concept="55IIr" id="1KKUl4nFfdk" role="3LF7KH">
-        <node concept="2Ry0Ak" id="1KKUl4nFffe" role="iGT6I">
-          <property role="2Ry0Am" value="languages" />
-          <node concept="2Ry0Ak" id="1KKUl4nFffj" role="2Ry0An">
-            <property role="2Ry0Am" value="CustomPersistenceSampleLanguage.sandbox" />
-            <node concept="2Ry0Ak" id="1KKUl4nFffo" role="2Ry0An">
-              <property role="2Ry0Am" value="CustomPersistenceSampleLanguage.sandbox.msd" />
-            </node>
+      <node concept="2pNNFK" id="k9Gb3aU5$y" role="20twgj">
+        <property role="2pNNFO" value="idea-version" />
+        <property role="qg3DV" value="true" />
+        <node concept="2pNUuL" id="k9Gb3aU5$z" role="2pNNFR">
+          <property role="2pNUuO" value="since-build" />
+          <node concept="2pMdtt" id="k9Gb3aU5$$" role="2pMdts">
+            <property role="2pMdty" value="193.1" />
           </node>
         </node>
       </node>
-      <node concept="1BupzO" id="1KKUl4nFffN" role="3bR31x">
-        <property role="3ZfqAx" value="models" />
-        <property role="1Hdu6h" value="true" />
-        <property role="1HemKv" value="true" />
-        <node concept="3LXTmp" id="1KKUl4nFffO" role="1HemKq">
-          <node concept="55IIr" id="1KKUl4nFffJ" role="3LXTmr">
-            <node concept="2Ry0Ak" id="1KKUl4nFffK" role="iGT6I">
-              <property role="2Ry0Am" value="languages" />
-              <node concept="2Ry0Ak" id="1KKUl4nFffL" role="2Ry0An">
-                <property role="2Ry0Am" value="CustomPersistenceSampleLanguage.sandbox" />
-                <node concept="2Ry0Ak" id="1KKUl4nFffM" role="2Ry0An">
-                  <property role="2Ry0Am" value="models" />
-                </node>
-              </node>
+      <node concept="2pNNFK" id="k9Gb3aU5yK" role="20twgj">
+        <property role="2pNNFO" value="extensions" />
+        <node concept="3o6iSG" id="k9Gb3aU5yS" role="3o6s8t" />
+        <node concept="2pNNFK" id="7ZoWiKceyBr" role="3o6s8t">
+          <property role="2pNNFO" value="mps.ModelFactoryProvider" />
+          <property role="qg3DV" value="true" />
+          <node concept="2pNUuL" id="3EZR1q044pb" role="2pNNFR">
+            <property role="2pNUuO" value="implementationClass" />
+            <node concept="2pMdtt" id="Y56RjR6ZQs" role="2pMdts">
+              <property role="2pMdty" value="jetbrains.mps.persistence.XmlModelPersistence" />
             </node>
           </node>
-          <node concept="3qWCbU" id="1KKUl4nFffP" role="3LXTna">
-            <property role="3qWCbO" value="**/*.mps, **/*.mpsr, **/.model, **/*.xml" />
+        </node>
+        <node concept="2pNNFK" id="71oXi7eb7hp" role="3o6s8t">
+          <property role="2pNNFO" value="mps.LanguageLibrary" />
+          <property role="qg3DV" value="true" />
+          <node concept="2pNUuL" id="71oXi7eb7hu" role="2pNNFR">
+            <property role="2pNUuO" value="dir" />
+          </node>
+        </node>
+        <node concept="2pNUuL" id="k9Gb3aU5yO" role="2pNNFR">
+          <property role="2pNUuO" value="defaultExtensionNs" />
+          <node concept="2pMdtt" id="k9Gb3aU5yP" role="2pMdts">
+            <property role="2pMdty" value="com.intellij" />
           </node>
         </node>
       </node>

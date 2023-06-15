@@ -41,9 +41,50 @@
     <mkdir dir="${build.layout}" />
     <mkdir dir="${build.tmp}/default/MPS-sample-persistence.zip" />
     <mkdir dir="${build.tmp}/default/MPS-sample-persistence.zip/mps-sample-persistence" />
+    <mkdir dir="${build.tmp}/default/MPS-sample-persistence.zip/mps-sample-persistence/META-INF" />
+    <echoxml file="${build.tmp}/default/MPS-sample-persistence.zip/mps-sample-persistence/META-INF/plugin.xml">
+      <idea-plugin xmlns:xi="http://www.w3.org/2001/XInclude">
+        <id>jetbrains.mps.samples.xmlPersistence</id>
+        <name>Sample XML Persistence</name>
+        <description>Sample persistence of MPS models into xml files</description>
+        <version>1.0</version>
+        <vendor url="http://www.jetbrains.com/mps/">JetBrains</vendor>
+        <depends>jetbrains.mps.core</depends>
+        <idea-version since-build="193.1" />
+        <extensions defaultExtensionNs="com.intellij">          
+          <mps.ModelFactoryProvider implementationClass="jetbrains.mps.persistence.XmlModelPersistence" />
+          <mps.LanguageLibrary dir="" />
+        </extensions>
+        
+        <extensions defaultExtensionNs="com.intellij">
+          <mps.LanguageLibrary dir="/languages" />
+        </extensions>
+      </idea-plugin>
+    </echoxml>
     <mkdir dir="${build.tmp}/default/MPS-sample-persistence.zip/mps-sample-persistence/lib" />
+    <mkdir dir="${build.tmp}/default/mps-sample-persistence.jar" />
+    <mkdir dir="${build.tmp}/default/mps-sample-persistence.jar/META-INF" />
+    <echoxml file="${build.tmp}/default/mps-sample-persistence.jar/META-INF/plugin.xml">
+      <idea-plugin xmlns:xi="http://www.w3.org/2001/XInclude">
+        <id>jetbrains.mps.samples.xmlPersistence</id>
+        <name>Sample XML Persistence</name>
+        <description>Sample persistence of MPS models into xml files</description>
+        <version>1.0</version>
+        <vendor url="http://www.jetbrains.com/mps/">JetBrains</vendor>
+        <depends>jetbrains.mps.core</depends>
+        <idea-version since-build="193.1" />
+        <extensions defaultExtensionNs="com.intellij">          
+          <mps.ModelFactoryProvider implementationClass="jetbrains.mps.persistence.XmlModelPersistence" />
+          <mps.LanguageLibrary dir="" />
+        </extensions>
+        
+        <extensions defaultExtensionNs="com.intellij">
+          <mps.LanguageLibrary dir="/languages" />
+        </extensions>
+      </idea-plugin>
+    </echoxml>
     <jar destfile="${build.tmp}/default/MPS-sample-persistence.zip/mps-sample-persistence/lib/mps-sample-persistence.jar" duplicate="preserve">
-      <zipfileset file="${basedir}/languages/jetbrains.mps.samples.xmlPersistence.ideaPlugin/source_gen/jetbrains/mps/samples/xmlPersistence/ideaPlugin/plugin.xml" prefix="META-INF" />
+      <fileset dir="${build.tmp}/default/mps-sample-persistence.jar" />
     </jar>
     <mkdir dir="${build.tmp}/default/MPS-sample-persistence.zip/mps-sample-persistence/lib" />
     <mkdir dir="${build.tmp}/default/jetbrains.mps.samples.xmlPersistence.jar" />
@@ -137,7 +178,6 @@
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-jetbrains.mps.samples.xmlPersistence.ideaPlugin-models" prefix="module/models" />
     </jar>
     <zip destfile="${build.layout}/MPS-sample-persistence.zip">
-      <zipfileset file="${basedir}/languages/jetbrains.mps.samples.xmlPersistence.ideaPlugin/source_gen/jetbrains/mps/samples/xmlPersistence/ideaPlugin/plugin.xml" prefix="mps-sample-persistence/META-INF" />
       <fileset dir="${build.tmp}/default/MPS-sample-persistence.zip" />
     </zip>
     <echo file="${build.layout}/build.properties">mps.build.number=${mps.build.number}${line.separator}mps.date=${mps.date}${line.separator}mps.build.vcs.number=${mps.build.vcs.number}${line.separator}mps.teamcity.buildConfName=${mps.teamcity.buildConfName}${line.separator}mps.idea.platform.build.number=${mps.idea.platform.build.number}${line.separator}mps.mps.build.counter=${mps.mps.build.counter}${line.separator}mpsBootstrapCore.version.major=${mpsBootstrapCore.version.major}${line.separator}mpsBootstrapCore.version.minor=${mpsBootstrapCore.version.minor}${line.separator}mpsBootstrapCore.version.bugfixNr=${mpsBootstrapCore.version.bugfixNr}${line.separator}mpsBootstrapCore.version.eap=${mpsBootstrapCore.version.eap}${line.separator}mpsBootstrapCore.version=${mpsBootstrapCore.version}</echo>
@@ -154,7 +194,7 @@
     <delete dir="${build.layout}" />
   </target>
   
-  <target name="compileJava" depends="java.compile.jetbrains.mps.samples.xmlPersistence, java.compile.jetbrains.mps.samples.xmlPersistence.build, java.compile.jetbrains.mps.samples.xmlPersistence.ideaPlugin, java.compile.CustomPersistenceSampleLanguage, java.compile.CustomPersistenceSampleLanguage.generator, java.compile.CustomPersistenceSampleLanguage.sandbox" />
+  <target name="compileJava" depends="java.compile.jetbrains.mps.samples.xmlPersistence, java.compile.jetbrains.mps.samples.xmlPersistence.build, java.compile.jetbrains.mps.samples.xmlPersistence.ideaPlugin, java.compile.CustomPersistenceSampleLanguage, java.compile.CustomPersistenceSampleLanguage.generator" />
   
   <target name="processResources" />
   
@@ -271,7 +311,6 @@
         <module file="${basedir}/languages/jetbrains.mps.samples.xmlPersistence.ideaPlugin/jetbrains.mps.samples.xmlPersistence.ideaPlugin.msd" />
       </chunk>
       <chunk>
-        <module file="${basedir}/languages/CustomPersistenceSampleLanguage.sandbox/CustomPersistenceSampleLanguage.sandbox.msd" />
         <module file="${basedir}/languages/jetbrains.mps.samples.xmlPersistence/jetbrains.mps.samples.xmlPersistence.msd" />
       </chunk>
       <jvmargs>
@@ -420,26 +459,11 @@
     </javac>
   </target>
   
-  <target name="java.compile.CustomPersistenceSampleLanguage.sandbox" depends="fetchDependencies">
-    <mkdir dir="${basedir}/languages/CustomPersistenceSampleLanguage.sandbox/source_gen" />
-    <mkdir dir="${build.tmp}/java/out/CustomPersistenceSampleLanguage.sandbox" />
-    <javac destdir="${build.tmp}/java/out/CustomPersistenceSampleLanguage.sandbox" fork="false" encoding="utf8" includeantruntime="false" debug="true" source="11" target="11">
-      <compilerarg value="-Xlint:none" />
-      <src>
-        <path location="${basedir}/languages/CustomPersistenceSampleLanguage.sandbox/source_gen" />
-      </src>
-      <classpath>
-        <fileset file="${artifacts.mps}/lib/mps-references.jar" />
-      </classpath>
-    </javac>
-  </target>
-  
   <target name="cleanSources">
     <delete dir="${basedir}/languages/CustomPersistenceSampleLanguage/source_gen" />
     <delete dir="${basedir}/languages/CustomPersistenceSampleLanguage/generator/source_gen" />
     <delete dir="${basedir}/languages/jetbrains.mps.samples.xmlPersistence.build/source_gen" />
     <delete dir="${basedir}/languages/jetbrains.mps.samples.xmlPersistence.ideaPlugin/source_gen" />
-    <delete dir="${basedir}/languages/CustomPersistenceSampleLanguage.sandbox/source_gen" />
     <delete dir="${basedir}/languages/jetbrains.mps.samples.xmlPersistence/source_gen" />
   </target>
 </project>
